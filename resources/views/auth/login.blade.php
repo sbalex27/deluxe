@@ -1,4 +1,11 @@
 <x-guest-layout>
+    <header class="flex justify-between items-center py-4">
+        <a href="{{ url('/') }}">
+            <img src="{{ asset('path/to/your-logo.png') }}" alt="Logo" class="h-10">
+        </a>
+        <h1 class="text-xl font-semibold">Iniciar Sesión</h1>
+    </header>
+
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -40,7 +47,7 @@
             @endif
 
             <x-primary-button class="ms-3">
-                {{ __('Log in') }}
+                {{ __('Iniciar sesión') }}
             </x-primary-button>
         </div>
     </form>
